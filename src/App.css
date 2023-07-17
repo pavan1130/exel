@@ -1,0 +1,407 @@
+/* Navbar Container */
+.navbar-container {
+  background-color: #e4f2ff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  margin-right: 10px;
+}
+
+/* Company Name */
+.company-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-color: #333;
+  width: 24px;
+  height: 2px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  margin-left: auto;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .navbar-container {
+    justify-content: space-between;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  .navbar-toggler .navbar-toggler-icon {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #08525b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+select {
+  appearance: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  background-image: linear-gradient(to bottom, #d2faff, #e6e6e6);
+  background-position: calc(100% - 20px) center;
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+select:hover {
+  background-color: #e6e6e6;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #007bff;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+div.submitted-details {
+  margin-top: 40px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+div.submitted-details h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+table.submitted-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table.submitted-table th,
+table.submitted-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+table.submitted-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
+}
+
+table.submitted-table td {
+  text-align: left;
+}
+
+table.submitted-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table.submitted-table tr:hover {
+  background-color: #e6e6e6;
+}
+
+table.submitted-table thead tr {
+  border-bottom: 2px solid #ccc;
+}
+
+table.submitted-table tbody tr:last-child {
+  border-bottom: 2px solid #ccc;
+}
+
+table.submitted-table th:first-child,
+table.submitted-table td:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+table.submitted-table th:last-child,
+table.submitted-table td:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+select[name="taskStatus"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+select[name="taskStatus"] option {
+  background-color: #fff;
+}
+
+select[name="taskStatus"] option[value="completed"] {
+  color: green; /* Green text color for completed */
+}
+
+select[name="taskStatus"] option[value="inProgress"] {
+  color: orange; /* Orange text color for in progress */
+}
+
+select[name="taskStatus"] option[value="blockers"] {
+  color: red; /* Red text color for blockers */
+}
+
+table.submitted-table td:nth-child(8) {
+  font-weight: bold;
+}
+
+table.submitted-table td:nth-child(8) span {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+table.submitted-table td:nth-child(8) span.completed {
+  background-color: green;
+}
+
+table.submitted-table td:nth-child(8) span.inProgress {
+  background-color: orange;
+}
+
+table.submitted-table td:nth-child(8) span.blockers {
+  background-color: red;
+}
+.task-status {
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.task-status.completed {
+  background-color: green;
+  color: white;
+}
+
+.task-status.inprogress {
+  background-color: orange;
+  color: white;
+}
+
+.task-status.blockers {
+  background-color: red;
+  color: white;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.popup p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.popup button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  /* background-color: #4caf50; */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.popup button span {
+  margin-left: 8px;
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe5c;
+}
+
+.email-button:hover {
+  background-color: #763d22;
+}
+.email-button {
+  background-color: #72290a;
+}
+.close-buttonnn {
+  background-color: red;
+  position: relative;
+  left: 90%;
+  top: -21vh;
+}
+.close-buttonnn:hover {
+  background-color: #ff4d4d;
+}
+
+.download-button {
+  background-color: green;
+  color: white;
+}
+
+.share-button {
+  background-color: rgb(7, 61, 77);
+  color: white;
+}
+
+.pdf-button {
+  background-color: rgb(255, 91, 91);
+  color: white;
+}
+button {
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
