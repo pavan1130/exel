@@ -1,83 +1,3 @@
-/* Navbar Container */
-.navbar-container {
-  background-color: #e4f2ff;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Navbar Logo */
-.navbar-logo {
-  margin-right: 10px;
-}
-
-/* Company Name */
-.company-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Navbar Toggler */
-.navbar-toggler {
-  border: none;
-  padding: 0;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.navbar-toggler .navbar-toggler-icon {
-  background-color: #333;
-  width: 24px;
-  height: 2px;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  background-color: transparent;
-}
-
-/* Navbar Links */
-.navbar-nav {
-  margin-left: auto;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-}
-
-.nav-item {
-  margin-right: 10px;
-}
-
-.nav-link {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #007bff;
-}
-
-/* Responsive Styles */
-@media (max-width: 991px) {
-  .navbar-container {
-    justify-content: space-between;
-  }
-
-  .company-name {
-    font-size: 1rem;
-  }
-
-  .navbar-toggler .navbar-toggler-icon {
-    width: 20px;
-    height: 2px;
-  }
-}
-
 .App {
   font-family: Arial, sans-serif;
   display: flex;
@@ -185,21 +105,22 @@ div.submitted-details h2 {
   margin-top: 0;
   margin-bottom: 20px;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   color: #333;
   text-transform: uppercase;
 }
 
 table.submitted-table {
-  width: 100%;
+  width: 80%; /* Reduce the table width to 80% */
   border-collapse: collapse;
   margin-top: 20px;
 }
 
 table.submitted-table th,
 table.submitted-table td {
-  padding: 12px;
+  padding: 8px; /* Reduce the padding for a more compact layout */
   border: 1px solid #ccc;
+  font-size: 14px; /* Reduce the font size to 14px */
 }
 
 table.submitted-table th {
@@ -213,7 +134,7 @@ table.submitted-table td {
 }
 
 table.submitted-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #ededed;
 }
 
 table.submitted-table tr:hover {
@@ -240,6 +161,14 @@ table.submitted-table td:last-child {
   border-bottom-right-radius: 4px;
 }
 
+/* Increase the width of the "Task Title" column */
+table.submitted-table td:nth-child(6) {
+  min-width: 180px; /* Adjust the width as needed */
+}
+/* Increase the width of the "Task Update" column */
+table.submitted-table td:nth-child(10) {
+  min-width: 300px; /* Adjust the width as needed */
+}
 select[name="taskStatus"] {
   padding: 8px;
   border: 1px solid #ccc;
@@ -266,12 +195,6 @@ select[name="taskStatus"] option[value="blockers"] {
 
 table.submitted-table td:nth-child(8) {
   font-weight: bold;
-}
-
-table.submitted-table td:nth-child(8) span {
-  padding: 4px 8px;
-  border-radius: 4px;
-  color: #fff;
 }
 
 table.submitted-table td:nth-child(8) span.completed {

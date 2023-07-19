@@ -1,0 +1,80 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Styling for the footer */
+.footer {
+  background-color: #162447; /* Dark blue background color */
+  color: #f0f0f0; /* Light text color */
+  padding: 5px 0; /* Reduce the footer padding */
+  text-align: center;
+  border-radius: 2px 160px / 190px 160px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow with offset-x, offset-y, blur-radius, and color */
+}
+
+.footer-container {
+  max-width: 1200px; /* Reduced width for the footer container */
+  margin: 0 auto;
+}
+
+/* Styling for social media icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px; /* Reduce the margin */
+}
+
+.social-icons a {
+  color: #f0f0f0; /* Light text color for social media icons */
+  font-size: 20px; /* Reduce the font size */
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff5e00; /* Orange color on hover for social media icons */
+}
+
+/* Styling for footer details */
+.footer-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5px 0; /* Reduce the margin */
+}
+
+.footer-details div {
+  flex: 1 0 48%; /* Reduce the width of footer details div */
+  max-width: 300px;
+  padding: 0 10px;
+  margin-bottom: 10px; /* Reduce the margin */
+}
+
+.footer-details h4 {
+  font-size: 16px; /* Reduce the font size */
+  margin-bottom: 5px; /* Reduce the margin */
+}
+
+.footer-details p {
+  font-size: 12px; /* Reduce the font size */
+  margin: 0;
+}
+
+/* Styling for the copyright text */
+.footer p {
+  font-size: 12px; /* Reduce the font size */
+  margin: 0;
+}
+
+/* Attractive colors for the footer */
+.footer-container {
+  color: #f0f0f0; /* Light text color */
+}
+
+.footer-details p {
+  color: #d8d8d8; /* Light gray color for paragraph text */
+}
+
+.footer-details h4 {
+  color: #ff5e00; /* Orange color for header text */
+}

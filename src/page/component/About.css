@@ -1,0 +1,137 @@
+/* About Container */
+.about-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* About Heading */
+.about-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-heading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* About Info Section */
+.about-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.about-section {
+  flex-basis: 48%;
+  margin-bottom: 20px;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.about-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-technology {
+  text-align: center;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.technology-cards {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 -10px; /* Adjust spacing between cards */
+  transition: transform 0.5s ease;
+}
+
+.technology-card {
+  flex: 0 0 300px; /* Adjust card width */
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.technology-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.technology-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.technology-card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.technology-card.active {
+  opacity: 1;
+}
+
+/* Arrow Buttons */
+.arrow-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.arrow-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-button:hover {
+  background-color: #0056b3;
+}
+/* About CTA Section */
+.about-cta {
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-cta p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.about-cta a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-cta a:hover {
+  text-decoration: underline;
+}

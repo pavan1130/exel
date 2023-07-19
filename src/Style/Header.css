@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.company-name {
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+  margin-left: -8%;
+  font-family: "Roboto", sans-serif;
+  color: #110e0e; /* White color for the company name text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+/* Style for the navigation links */
+.nav-link {
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 8vh;
+  text-decoration: none;
+  position: relative;
+  left: 60%;
+}
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+/* Style for the logo */
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+/* Style for the navigation bar background */
+.navbar {
+  background-color: #f9feff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the navigation links container */
+.navbar-nav {
+  align-items: center;
+}
+
+/* Style for the mobile view toggle button */
+.navbar-toggler-icon {
+  border: 2px solid #333;
+}
+
+/* Style for the mobile view toggle button (on hover) */
+.navbar-toggler-icon:hover {
+  border-color: #007bff;
+  transition: border-color 0.3s ease;
+}
+
+/* Style for the collapsed navigation menu background */
+#navbar-nav {
+  background-color: #f8f9fa;
+}
+
+/* Style for the active navigation link */
+.nav-item.active .nav-link {
+  color: #007bff;
+}
