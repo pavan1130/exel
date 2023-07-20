@@ -118,15 +118,39 @@ function Exel() {
     window.open(url, "_blank");
   };
 
-  const handleEmailShare = () => {
+  const handleEmailShare = async () => {
     const formattedData = formatDataForSharing();
     const subject = "Submitted Details";
     const body = formattedData;
-    console.log("Sharing via Email:");
-    console.log("Subject:", subject);
-    console.log("Body:", body);
-  };
 
+    // Generate PDF and attach it to the email
+    const pdfDataUri = await generatePDFDataUri();
+
+    // Create a link with the PDF data URI and trigger the download
+    const link = document.createElement("a");
+    link.href = pdfDataUri;
+    link.download = "submitted_details.pdf";
+    link.click();
+
+    // Prompt the user to send the email manually
+    const emailLink = `mailto:?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = emailLink;
+  };
+  const generatePDFDataUri = () => {
+    return new Promise((resolve) => {
+      html2canvas(submittedTableRef.current).then((canvas) => {
+        const imgData = canvas.toDataURL("image/png");
+        const pdf = new jsPDF("p", "mm", "a4");
+        const imgWidth = 190; // Adjust the width (mm) of the image in the PDF
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        pdf.addImage(imgData, "PNG", 10, 10, imgWidth, imgHeight);
+        const pdfDataUri = pdf.output("datauristring");
+        resolve(pdfDataUri);
+      });
+    });
+  };
   const formatDataForSharing = () => {
     return submittedData
       .map((data) => {
